@@ -137,3 +137,27 @@
 2023-12-23T00:46:42.492+08:00  INFO 4992 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-12-23T00:46:42.494+08:00  INFO 4992 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-12-23T00:46:42.499+08:00  INFO 4992 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-23T00:46:44.270+08:00  INFO 15296 --- [main] com.example.DbProjectApplication         : Starting DbProjectApplication using Java 17.0.7 with PID 15296 (D:\1数据库课程设计\dbProject\target\classes started by 杨骜捷 in D:\1数据库课程设计\dbProject)
+2023-12-23T00:46:44.273+08:00  INFO 15296 --- [main] com.example.DbProjectApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-12-23T00:46:44.700+08:00  INFO 15296 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-23T00:46:44.711+08:00  INFO 15296 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2023-12-23T00:46:45.030+08:00  INFO 15296 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2023-12-23T00:46:45.038+08:00  INFO 15296 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-23T00:46:45.038+08:00  INFO 15296 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-23T00:46:45.099+08:00  INFO 15296 --- [main] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring embedded WebApplicationContext
+2023-12-23T00:46:45.100+08:00  INFO 15296 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 795 ms
+2023-12-23T00:46:45.181+08:00  INFO 15296 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-23T00:46:45.370+08:00  INFO 15296 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3db65c0d
+2023-12-23T00:46:45.371+08:00  INFO 15296 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-23T00:46:45.405+08:00  INFO 15296 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-23T00:46:45.444+08:00  INFO 15296 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.17.Final
+2023-12-23T00:46:45.446+08:00  INFO 15296 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-23T00:46:45.636+08:00  INFO 15296 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-23T00:46:45.895+08:00  INFO 15296 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-23T00:46:45.900+08:00  INFO 15296 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-23T00:46:45.992+08:00  WARN 15296 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-23T00:46:46.245+08:00  INFO 15296 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/acstudents'
+2023-12-23T00:46:46.252+08:00  INFO 15296 --- [main] com.example.DbProjectApplication         : Started DbProjectApplication in 2.303 seconds (process running for 2.769)
+2023-12-23T00:46:49.886+08:00  INFO 15296 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-23T00:46:49.887+08:00  INFO 15296 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-23T00:46:49.887+08:00  INFO 15296 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
