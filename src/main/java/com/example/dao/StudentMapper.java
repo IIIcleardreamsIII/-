@@ -14,20 +14,23 @@ public interface StudentMapper {
 
     // 插入学生信息
     @Insert("INSERT INTO Student (examNumber, name, gender, birthdate, className, hometown, entranceScore) " +
-            "VALUES (#{studentId}, #{name}, #{gender}, #{birthdate}, #{className}, #{hometown}, #{entranceScore})")
+            "VALUES (#{examNumber}, #{studentName}, #{gender}, #{birthdate}, #{className}, #{hometown}, #{entranceScore})")
     void insertStudent(Student student);
+
 
     // 更新学生信息
     @Update("UPDATE Student SET " +
             "name = #{name}, gender = #{gender}, birthdate = #{birthdate}, " +
             "className = #{className}, hometown = #{hometown}, entranceScore = #{entranceScore} " +
-            "WHERE examNumber = #{studentId}")
+            "WHERE examNumber = #{examNumber}")
     void updateStudent(Student student);
 
     // 删除学生信息
-    @Delete("DELETE FROM Student WHERE examNumber = #{studentId}")
+    @Delete("DELETE FROM Student WHERE examNumber = #{examNumber}")
     void deleteStudent(int examNumber);
+
     @Select("SELECT * FROM Student")
     List<Student> getAllStudents();
+
     // 其他自定义查询方法...
 }

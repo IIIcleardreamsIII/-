@@ -19,5 +19,3 @@ logging:
     com.star: debug
   file:
     name: log/blog-dev.log
-
-

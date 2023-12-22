@@ -5,11 +5,12 @@ import com.example.service.AdmissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/admissions")
 public class AdmissionController {
 
@@ -20,10 +21,20 @@ public class AdmissionController {
         this.admissionService = admissionService;
     }
 
-    @PostMapping
+    @PostMapping("/add")
     public ResponseEntity<Void> addAdmission(@RequestBody Admission admission) {
-        admissionService.addAdmission(admission);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        try {
+            admissionService.addAdmission(admission);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT); // 表示成功，返回204状态码
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST); // 表示失败，返回400状态码
+        }
+    }
+
+
+    @GetMapping
+    public String admissionPage() {
+        return "Admission"; // This maps to src/main/resources/static/Admission.html
     }
 
     @GetMapping("/{admissionId}")
@@ -57,9 +68,10 @@ public class AdmissionController {
         }
     }
 
-    @GetMapping
+    @GetMapping("/all")  // 不要包含 /admissions，因为在类上已经有 @RequestMapping("/admissions")
     public ResponseEntity<List<Admission>> getAllAdmissions() {
         List<Admission> admissions = admissionService.getAllAdmissions();
         return new ResponseEntity<>(admissions, HttpStatus.OK);
     }
+
 }

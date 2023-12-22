@@ -2,18 +2,18 @@ package com.example.pojo;
 
 import java.util.Date;
 
+
 public class Student {
-    private int studentId;  // 考号
-    private String name;    // 姓名
-    private String gender;  // 性别
-    private Date birthdate; // 出生年月
-    private String className; // 班级
-    private String hometown;  // 籍贯
-    private int entranceScore; // 高考成绩
+    private int examNumber;      // 考号
+    private String name;         // 姓名
+    private String gender;       // 性别
+    private Date birthdate;      // 出生年月
+    private String className;    // 班级
+    private String hometown;     // 籍贯
+    private int entranceScore;   // 高考成绩
 
     public Student() {
     }
-
 
     // Getters and Setters
     public int getEntranceScore() {
@@ -64,18 +64,18 @@ public class Student {
         this.name = name;
     }
 
-    public int getStudentId() {
-        return studentId;
+    public int getExamNumber() {
+        return examNumber;
     }
 
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
+    public void setExamNumber(int examNumber) {
+        this.examNumber = examNumber;
     }
 
     @Override
     public String toString() {
         return "Student{" +
-                "studentId=" + studentId +
+                "examNumber=" + examNumber +
                 ", name='" + name + '\'' +
                 ", gender='" + gender + '\'' +
                 ", birthdate=" + birthdate +
@@ -85,4 +85,3 @@ public class Student {
                 '}';
     }
 }
-

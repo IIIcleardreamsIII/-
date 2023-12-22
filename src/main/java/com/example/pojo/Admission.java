@@ -2,6 +2,7 @@ package com.example.pojo;
 
 public class Admission {
     private int admissionId;      // 录取记录编号
+    private int examNumber;       // 考号
     private Student student;      // 学生信息
     private College college;      // 录取院校信息
     private String admissionBatch; // 录取批次
@@ -14,6 +15,14 @@ public class Admission {
 
     public void setAdmissionId(int admissionId) {
         this.admissionId = admissionId;
+    }
+
+    public int getExamNumber() {
+        return examNumber;
+    }
+
+    public void setExamNumber(int examNumber) {
+        this.examNumber = examNumber;
     }
 
     public Student getStudent() {
@@ -44,6 +53,7 @@ public class Admission {
     public String toString() {
         return "Admission{" +
                 "admissionId=" + admissionId +
+                ", examNumber=" + examNumber +
                 ", student=" + student +
                 ", college=" + college +
                 ", admissionBatch='" + admissionBatch + '\'' +

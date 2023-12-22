@@ -4,31 +4,250 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admissions</title>
-  <link rel="stylesheet" href="css/Admission.css">
+  <style>
+    /* Admission.css */
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      color: #333;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 20px 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+  </style>
 </head>
 <body>
-<h2>Admissions</h2>
 
-<!-- Display Admissions -->
+<h1>Admissions Management</h1>
+
+<form id="addAdmissionForm">
+  <!-- Add Admission Form Fields -->
+  <label for="admissionBatch">Admission Batch:</label>
+  <input type="text" id="admissionBatch" required>
+
+  <label for="studentId">Student ID:</label>
+  <input type="text" id="studentId" required>
+
+  <label for="collegeId">College ID:</label>
+  <input type="text" id="collegeId" required>
+
+  <button type="submit">Add Admission</button>
+</form>
+
+<!-- Update Admission Form -->
+<form id="updateAdmissionForm">
+  <label for="updateAdmissionId">Admission ID to Update:</label>
+  <input type="text" id="updateAdmissionId" required>
+
+  <label for="updateAdmissionBatch">New Admission Batch:</label>
+  <input type="text" id="updateAdmissionBatch" required>
+
+  <label for="updateStudentId">New Student ID:</label>
+  <input type="text" id="updateStudentId" required>
+
+  <label for="updateCollegeId">New College ID:</label>
+  <input type="text" id="updateCollegeId" required>
+
+  <button type="submit">Update Admission</button>
+</form>
+
+<!-- Other Buttons -->
+<button onclick="fetchAdmissions()">Fetch Admissions</button>
+<button onclick="fetchAdmissionById()">Fetch Admission by ID</button>
+<button onclick="deleteAdmission()">Delete Admission</button>
+
+<!-- Admission List -->
 <ul id="admissionList"></ul>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  // Admission.js
 
-<!-- Add Admission Form -->
-<div>
-  <h3>Add Admission</h3>
-  <form id="addAdmissionForm">
-    <label for="admissionBatch">Admission Batch:</label>
-    <input type="text" id="admissionBatch" required>
+  $(document).ready(function () {
+    // Fetch and display admissions
+    fetchAdmissions();
 
-    <label for="studentId">Student ID:</label>
-    <input type="number" id="studentId" required>
+    // Add event listener for form submission
+    $('#addAdmissionForm').submit(function (event) {
+      event.preventDefault();
+      addAdmission();
+    });
 
-    <label for="collegeId">College ID:</label>
-    <input type="number" id="collegeId" required>
+    // Add event listener for update form submission
+    $('#updateAdmissionForm').submit(function (event) {
+      event.preventDefault();
+      updateAdmission();
+    });
 
-    <button type="submit">Add Admission</button>
-  </form>
-</div>
+    // Other buttons
+    $('button[name="fetchAdmissions"]').click(fetchAdmissions);
+    $('button[name="fetchAdmissionById"]').click(fetchAdmissionById);
+    $('button[name="deleteAdmission"]').click(deleteAdmission);
+  });
 
-<script src="js/Admission.js"></script>
+  function fetchAdmissions() {
+    $.ajax({
+      type: 'GET',
+      url: 'http://localhost:8089/acstudents/admissions',
+      dataType: 'json',
+      success: function (admissions) {
+        displayAdmissions(admissions);
+      },
+      error: function (error) {
+        console.error('Error fetching admissions:', error);
+      }
+    });
+  }
+
+  function fetchAdmissionById() {
+    const admissionId = prompt('Enter Admission ID:');
+    if (admissionId !== null) {
+      $.ajax({
+        type: 'GET',
+        url: `http://localhost:8089/acstudents/admissions/${admissionId}`,
+        dataType: 'json',
+        success: function (admission) {
+          displayAdmissions([admission]);
+        },
+        error: function (error) {
+          console.error('Error fetching admission by ID:', error);
+        }
+      });
+    }
+  }
+
+  function addAdmission() {
+    const admissionBatch = $('#admissionBatch').val();
+    const studentId = $('#studentId').val();
+    const collegeId = $('#collegeId').val();
+
+    const newAdmission = {
+      admissionBatch: admissionBatch,
+      student: { studentId: studentId },
+      college: { collegeId: collegeId }
+    };
+
+    $.ajax({
+      type: 'POST',
+      url: 'http://localhost:8089/acstudents/admissions',
+      contentType: 'application/json',
+      data: JSON.stringify(newAdmission),
+      success: function (responseData) {
+        console.log('Admission added successfully:', responseData);
+        fetchAdmissions(); // Refresh the admissions list
+        $('#addAdmissionForm')[0].reset(); // Clear the form
+      },
+      error: function (error) {
+        console.error('Error adding admission:', error);
+      }
+    });
+  }
+
+  function updateAdmission() {
+    const updateAdmissionId = $('#updateAdmissionId').val();
+    const updateAdmissionBatch = $('#updateAdmissionBatch').val();
+    const updateStudentId = $('#updateStudentId').val();
+    const updateCollegeId = $('#updateCollegeId').val();
+
+    const updatedAdmission = {
+      admissionId: updateAdmissionId,
+      admissionBatch: updateAdmissionBatch,
+      student: { studentId: updateStudentId },
+      college: { collegeId: updateCollegeId }
+    };
+
+    $.ajax({
+      type: 'PUT',
+      url: `http://localhost:8089/acstudents/admissions/${updateAdmissionId}`,
+      contentType: 'application/json',
+      data: JSON.stringify(updatedAdmission),
+      success: function () {
+        console.log('Admission updated successfully.');
+        fetchAdmissions(); // Refresh the admissions list
+        $('#updateAdmissionForm')[0].reset(); // Clear the update form
+      },
+      error: function (error) {
+        console.error('Error updating admission:', error);
+      }
+    });
+  }
+
+  function deleteAdmission() {
+    const admissionId = prompt('Enter Admission ID to delete:');
+    if (admissionId !== null) {
+      $.ajax({
+        type: 'DELETE',
+        url: `http://localhost:8089/acstudents/admissions/${admissionId}`,
+        success: function () {
+          console.log('Admission deleted successfully.');
+          fetchAdmissions(); // Refresh the admissions list
+        },
+        error: function (error) {
+          console.error('Error deleting admission:', error);
+        }
+      });
+    }
+  }
+
+  function displayAdmissions(admissions) {
+    const admissionList = $('#admissionList');
+    admissionList.empty(); // Clear previous entries
+
+    admissions.forEach(admission => {
+      const listItem = $('<li>').text(`${admission.admissionBatch} - Student ID: ${admission.student.studentId} - College ID: ${admission.college.collegeId}`);
+      admissionList.append(listItem);
+    });
+  }
+
+</script>
 </body>
 </html>

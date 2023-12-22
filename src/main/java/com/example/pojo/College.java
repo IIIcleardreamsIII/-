@@ -3,10 +3,13 @@ package com.example.pojo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class College {
-    private int collegeId;     // 院校编号
-    private String collegeName; // 院校名称
+    private int collegeId;          // 院校编号
+    private String collegeName;     // 院校名称
+    private String collegeAddress;  // 院校地址
 
-    private String collegeAddress;     // 院校地址
+    // 无参构造函数
+    public College() {
+    }
 
     // Getters and Setters
 
@@ -39,7 +42,7 @@ public class College {
         return "College{" +
                 "collegeId=" + collegeId +
                 ", collegeName='" + collegeName + '\'' +
-                ", address='" + collegeAddress + '\'' +
+                ", collegeAddress='" + collegeAddress + '\'' +
                 '}';
     }
 }
