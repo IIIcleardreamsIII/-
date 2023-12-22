@@ -14,7 +14,7 @@ public interface StudentMapper {
 
     // 插入学生信息
     @Insert("INSERT INTO Student (examNumber, name, gender, birthdate, className, hometown, entranceScore) " +
-            "VALUES (#{examNumber}, #{studentName}, #{gender}, #{birthdate}, #{className}, #{hometown}, #{entranceScore})")
+            "VALUES (#{examNumber}, #{name}, #{gender}, #{birthdate}, #{className}, #{hometown}, #{entranceScore})")
     void insertStudent(Student student);
 
 
@@ -25,6 +25,7 @@ public interface StudentMapper {
             "WHERE examNumber = #{examNumber}")
     void updateStudent(Student student);
 
+
     // 删除学生信息
     @Delete("DELETE FROM Student WHERE examNumber = #{examNumber}")
     void deleteStudent(int examNumber);
@@ -32,5 +33,8 @@ public interface StudentMapper {
     @Select("SELECT * FROM Student")
     List<Student> getAllStudents();
 
+    @Insert("INSERT INTO Student (examNumber, name, gender, birthdate, className, hometown, entranceScore) " +
+            "VALUES (#{examNumber}, #{name}, #{gender}, #{birthdate}, #{className}, #{hometown}, #{entranceScore})")
+    void addDetailedStudent(Student student);
     // 其他自定义查询方法...
 }

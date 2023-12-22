@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -35,16 +36,18 @@ public class StudentController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<Void> addStudent(@RequestBody Student student) {
+    public ResponseEntity<Object> addStudent(@RequestBody Student student) {
         try {
             studentService.addStudent(student);
-            return new ResponseEntity<>(HttpStatus.CREATED);
+            // 返回一个空的 JSON 对象
+            return new ResponseEntity<>(Collections.emptyMap(), HttpStatus.CREATED);
         } catch (Exception e) {
             // Log the exception details
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
 
     @PutMapping("/update")
     public ResponseEntity<Void> updateStudent(@RequestBody Student student) {
@@ -53,15 +56,33 @@ public class StudentController {
     }
 
     @DeleteMapping("/delete/{examNumber}")
-    public ResponseEntity<Void> deleteStudent(@PathVariable int examNumber) {
-        studentService.deleteStudent(examNumber);
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<Object> deleteStudent(@PathVariable int examNumber) {
+        boolean deleted = studentService.deleteStudent(examNumber);
+
+        if (deleted) {
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
+
+
 
     @GetMapping("/all")
     public ResponseEntity<List<Student>> getAllStudents() {
         List<Student> students = studentService.getAllStudents();
         return new ResponseEntity<>(students, HttpStatus.OK);
+    }
+    // 添加详细信息的方法
+    @PostMapping("/addDetailed")
+    public ResponseEntity<Void> addDetailedStudent(@RequestBody Student student) {
+        try {
+            studentService.addDetailedStudent(student);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     // Add other Controller methods if needed...

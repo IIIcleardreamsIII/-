@@ -33,13 +33,19 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public void deleteStudent(int examNumber) {
+    public boolean deleteStudent(int examNumber) {
         studentMapper.deleteStudent(examNumber);
+        return false;
     }
 
     @Override
     public List<Student> getAllStudents() {
         return studentMapper.getAllStudents();
+    }
+
+    @Override
+    public void addDetailedStudent(Student student) {
+        studentMapper.addDetailedStudent(student);
     }
 
 
