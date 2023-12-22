@@ -2,6 +2,8 @@ package com.example.service;
 
 import com.example.pojo.College;
 
+import java.util.List;
+
 public interface CollegeService {
 
     void addCollege(College college);
@@ -11,6 +13,8 @@ public interface CollegeService {
     void updateCollege(College college);
 
     void deleteCollege(int collegeId);
+
+    List<College> getAllColleges();
 
     // 其他自定义查询方法...
 }

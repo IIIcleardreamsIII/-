@@ -2,54 +2,46 @@ package com.example.controller;
 
 import com.example.pojo.Student;
 import com.example.service.StudentService;
-import com.example.service.impl.StudentServiceImpl;
-import com.example.util.mybatisUtils;
-import com.example.dao.StudentMapper;
-import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
+@RestController
+@RequestMapping("/students")
 public class StudentController {
 
     private final StudentService studentService;
 
+    @Autowired
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
 
-    public void getStudentById(int examNumber) {
-        try (SqlSession sqlSession = mybatisUtils.getSession()) {
-            StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
-            Student student = studentService.getStudentById(examNumber);
-            System.out.println(student);
-        }
+    @GetMapping("/{examNumber}")
+    public Student getStudentById(@PathVariable int examNumber) {
+        return studentService.getStudentById(examNumber);
     }
 
-    public void addStudent(Student student) {
-        try (SqlSession sqlSession = mybatisUtils.getSession()) {
-            StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
-            studentService.addStudent(student);
-            sqlSession.commit();
-            System.out.println("Student added successfully.");
-        }
+    @PostMapping("/add")
+    public void addStudent(@RequestBody Student student) {
+        studentService.addStudent(student);
     }
 
-    public void updateStudent(Student student) {
-        try (SqlSession sqlSession = mybatisUtils.getSession()) {
-            StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
-            studentService.updateStudent(student);
-            sqlSession.commit();
-            System.out.println("Student updated successfully.");
-        }
+    @PutMapping("/update")
+    public void updateStudent(@RequestBody Student student) {
+        studentService.updateStudent(student);
     }
 
-    public void deleteStudent(int examNumber) {
-        try (SqlSession sqlSession = mybatisUtils.getSession()) {
-            StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
-            studentService.deleteStudent(examNumber);
-            sqlSession.commit();
-            System.out.println("Student deleted successfully.");
-        }
+    @DeleteMapping("/delete/{examNumber}")
+    public void deleteStudent(@PathVariable int examNumber) {
+        studentService.deleteStudent(examNumber);
+    }
+
+    @GetMapping("/all")
+    public List<Student> getAllStudents() {
+        return studentService.getAllStudents();
     }
 
     // Add other Controller methods if needed...
-
 }

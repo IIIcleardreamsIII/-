@@ -1,0 +1,127 @@
+2023-12-22T14:49:45.891+08:00  INFO 7432 --- [main] c.e.dbproject.DbProjectApplication       : Starting DbProjectApplication using Java 17.0.7 with PID 7432 (D:\1数据库课程设计\dbProject\target\classes started by 杨骜捷 in D:\1数据库课程设计\dbProject)
+2023-12-22T14:49:45.893+08:00  INFO 7432 --- [main] c.e.dbproject.DbProjectApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-12-22T14:49:46.266+08:00  WARN 7432 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.dbproject]' package. Please check your configuration.
+2023-12-22T14:49:46.517+08:00  INFO 7432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-12-22T14:49:46.524+08:00  INFO 7432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-22T14:49:46.524+08:00  INFO 7432 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-22T14:49:46.581+08:00  INFO 7432 --- [main] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring embedded WebApplicationContext
+2023-12-22T14:49:46.581+08:00  INFO 7432 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 657 ms
+2023-12-22T14:49:46.788+08:00  WARN 7432 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-12-22T14:49:46.907+08:00  INFO 7432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/acstudents'
+2023-12-22T14:49:46.913+08:00  INFO 7432 --- [main] c.e.dbproject.DbProjectApplication       : Started DbProjectApplication in 1.322 seconds (process running for 1.718)
+2023-12-22T14:51:31.970+08:00  INFO 12220 --- [main] c.e.dbproject.DbProjectApplication       : Starting DbProjectApplication using Java 17.0.7 with PID 12220 (D:\1数据库课程设计\dbProject\target\classes started by 杨骜捷 in D:\1数据库课程设计\dbProject)
+2023-12-22T14:51:31.972+08:00  INFO 12220 --- [main] c.e.dbproject.DbProjectApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-12-22T14:51:32.336+08:00  WARN 12220 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.dbproject]' package. Please check your configuration.
+2023-12-22T14:51:32.572+08:00  INFO 12220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-12-22T14:51:32.578+08:00  INFO 12220 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-22T14:51:32.579+08:00  INFO 12220 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-22T14:51:32.633+08:00  INFO 12220 --- [main] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring embedded WebApplicationContext
+2023-12-22T14:51:32.633+08:00  INFO 12220 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 633 ms
+2023-12-22T14:51:32.833+08:00  WARN 12220 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-12-22T14:51:32.948+08:00  INFO 12220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/acstudents'
+2023-12-22T14:51:32.954+08:00  INFO 12220 --- [main] c.e.dbproject.DbProjectApplication       : Started DbProjectApplication in 1.301 seconds (process running for 1.673)
+2023-12-22T14:55:44.469+08:00  INFO 12220 --- [http-nio-8088-exec-3] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22T14:55:44.469+08:00  INFO 12220 --- [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-22T14:55:44.470+08:00  INFO 12220 --- [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-22T15:48:01.696+08:00  INFO 11116 --- [main] c.e.dbproject.DbProjectApplication       : Starting DbProjectApplication using Java 17.0.7 with PID 11116 (D:\1数据库课程设计\dbProject\target\classes started by 杨骜捷 in D:\1数据库课程设计\dbProject)
+2023-12-22T15:48:01.699+08:00  INFO 11116 --- [main] c.e.dbproject.DbProjectApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-12-22T15:48:02.317+08:00  WARN 11116 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.dbproject]' package. Please check your configuration.
+2023-12-22T15:48:02.668+08:00  INFO 11116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-12-22T15:48:02.679+08:00  INFO 11116 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-22T15:48:02.679+08:00  INFO 11116 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-22T15:48:02.785+08:00  INFO 11116 --- [main] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring embedded WebApplicationContext
+2023-12-22T15:48:02.786+08:00  INFO 11116 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1034 ms
+2023-12-22T15:48:03.136+08:00  WARN 11116 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-12-22T15:48:03.311+08:00  INFO 11116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/acstudents'
+2023-12-22T15:48:03.323+08:00  INFO 11116 --- [main] c.e.dbproject.DbProjectApplication       : Started DbProjectApplication in 2.123 seconds (process running for 2.7)
+2023-12-22T15:48:05.978+08:00  INFO 11116 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22T15:48:05.978+08:00  INFO 11116 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-22T15:48:05.980+08:00  INFO 11116 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-22T15:52:42.303+08:00  INFO 18132 --- [main] c.e.dbproject.DbProjectApplication       : Starting DbProjectApplication using Java 17.0.7 with PID 18132 (D:\1数据库课程设计\dbProject\target\classes started by 杨骜捷 in D:\1数据库课程设计\dbProject)
+2023-12-22T15:52:42.306+08:00  INFO 18132 --- [main] c.e.dbproject.DbProjectApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-12-22T15:52:42.811+08:00  WARN 18132 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.dbproject]' package. Please check your configuration.
+2023-12-22T15:52:43.100+08:00  INFO 18132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-12-22T15:52:43.108+08:00  INFO 18132 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-22T15:52:43.108+08:00  INFO 18132 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-22T15:52:43.168+08:00  INFO 18132 --- [main] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring embedded WebApplicationContext
+2023-12-22T15:52:43.169+08:00  INFO 18132 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 825 ms
+2023-12-22T15:52:43.527+08:00  INFO 18132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/acstudents'
+2023-12-22T15:52:43.535+08:00  INFO 18132 --- [main] c.e.dbproject.DbProjectApplication       : Started DbProjectApplication in 1.598 seconds (process running for 2.096)
+2023-12-22T15:52:55.094+08:00  INFO 18132 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22T15:52:55.095+08:00  INFO 18132 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-22T15:52:55.096+08:00  INFO 18132 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-22T15:56:29.096+08:00  INFO 23512 --- [main] c.e.dbproject.DbProjectApplication       : Starting DbProjectApplication using Java 17.0.7 with PID 23512 (D:\1数据库课程设计\dbProject\target\classes started by 杨骜捷 in D:\1数据库课程设计\dbProject)
+2023-12-22T15:56:29.099+08:00  INFO 23512 --- [main] c.e.dbproject.DbProjectApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-12-22T15:56:29.581+08:00  WARN 23512 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.dbproject]' package. Please check your configuration.
+2023-12-22T15:56:29.842+08:00  INFO 23512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-12-22T15:56:29.850+08:00  INFO 23512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-22T15:56:29.850+08:00  INFO 23512 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-22T15:56:29.911+08:00  INFO 23512 --- [main] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring embedded WebApplicationContext
+2023-12-22T15:56:29.911+08:00  INFO 23512 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 771 ms
+2023-12-22T15:56:30.269+08:00  INFO 23512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/acstudents'
+2023-12-22T15:56:30.275+08:00  INFO 23512 --- [main] c.e.dbproject.DbProjectApplication       : Started DbProjectApplication in 1.583 seconds (process running for 2.018)
+2023-12-22T15:56:38.173+08:00  INFO 23512 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22T15:56:38.173+08:00  INFO 23512 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-22T15:56:38.174+08:00  INFO 23512 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-12-22T16:05:40.904+08:00  INFO 2348 --- [main] c.e.dbproject.DbProjectApplication       : Starting DbProjectApplication using Java 17.0.7 with PID 2348 (D:\1数据库课程设计\dbProject\target\classes started by 杨骜捷 in D:\1数据库课程设计\dbProject)
+2023-12-22T16:05:40.907+08:00  INFO 2348 --- [main] c.e.dbproject.DbProjectApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-12-22T16:05:41.425+08:00  WARN 2348 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.dbproject]' package. Please check your configuration.
+2023-12-22T16:05:41.691+08:00  INFO 2348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-12-22T16:05:41.699+08:00  INFO 2348 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-22T16:05:41.699+08:00  INFO 2348 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-22T16:05:41.758+08:00  INFO 2348 --- [main] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring embedded WebApplicationContext
+2023-12-22T16:05:41.759+08:00  INFO 2348 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 814 ms
+2023-12-22T16:05:42.113+08:00  INFO 2348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/acstudents'
+2023-12-22T16:05:42.120+08:00  INFO 2348 --- [main] c.e.dbproject.DbProjectApplication       : Started DbProjectApplication in 1.589 seconds (process running for 2.027)
+2023-12-22T16:05:56.887+08:00  INFO 2348 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22T16:05:56.888+08:00  INFO 2348 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-22T16:05:56.889+08:00  INFO 2348 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-22T16:12:42.575+08:00  INFO 2896 --- [main] c.e.dbproject.DbProjectApplication       : Starting DbProjectApplication using Java 17.0.7 with PID 2896 (D:\1数据库课程设计\dbProject\target\classes started by 杨骜捷 in D:\1数据库课程设计\dbProject)
+2023-12-22T16:12:42.578+08:00  INFO 2896 --- [main] c.e.dbproject.DbProjectApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-12-22T16:12:43.104+08:00  WARN 2896 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.dbproject]' package. Please check your configuration.
+2023-12-22T16:12:43.366+08:00  INFO 2896 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-12-22T16:12:43.374+08:00  INFO 2896 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-22T16:12:43.374+08:00  INFO 2896 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-22T16:12:43.436+08:00  INFO 2896 --- [main] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring embedded WebApplicationContext
+2023-12-22T16:12:43.437+08:00  INFO 2896 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 812 ms
+2023-12-22T16:12:43.793+08:00  INFO 2896 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/acstudents'
+2023-12-22T16:12:43.800+08:00  INFO 2896 --- [main] c.e.dbproject.DbProjectApplication       : Started DbProjectApplication in 1.623 seconds (process running for 2.104)
+2023-12-22T16:12:48.501+08:00  INFO 2896 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22T16:12:48.502+08:00  INFO 2896 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-22T16:12:48.502+08:00  INFO 2896 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-12-22T16:17:45.346+08:00  INFO 6804 --- [main] c.e.dbproject.DbProjectApplication       : Starting DbProjectApplication using Java 17.0.7 with PID 6804 (D:\1数据库课程设计\dbProject\target\classes started by 杨骜捷 in D:\1数据库课程设计\dbProject)
+2023-12-22T16:17:45.349+08:00  INFO 6804 --- [main] c.e.dbproject.DbProjectApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-12-22T16:17:45.841+08:00  WARN 6804 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.dbproject]' package. Please check your configuration.
+2023-12-22T16:17:46.111+08:00  INFO 6804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-12-22T16:17:46.119+08:00  INFO 6804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-22T16:17:46.119+08:00  INFO 6804 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-22T16:17:46.181+08:00  INFO 6804 --- [main] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring embedded WebApplicationContext
+2023-12-22T16:17:46.182+08:00  INFO 6804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 794 ms
+2023-12-22T16:17:46.563+08:00  INFO 6804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/acstudents'
+2023-12-22T16:17:46.571+08:00  INFO 6804 --- [main] c.e.dbproject.DbProjectApplication       : Started DbProjectApplication in 1.597 seconds (process running for 2.03)
+2023-12-22T16:17:49.143+08:00  INFO 6804 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22T16:17:49.143+08:00  INFO 6804 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-22T16:17:49.144+08:00  INFO 6804 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-22T16:20:51.090+08:00  INFO 24440 --- [main] c.e.dbproject.DbProjectApplication       : Starting DbProjectApplication using Java 17.0.7 with PID 24440 (D:\1数据库课程设计\dbProject\target\classes started by 杨骜捷 in D:\1数据库课程设计\dbProject)
+2023-12-22T16:20:51.093+08:00  INFO 24440 --- [main] c.e.dbproject.DbProjectApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-12-22T16:20:51.589+08:00  WARN 24440 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.dbproject]' package. Please check your configuration.
+2023-12-22T16:20:51.880+08:00  INFO 24440 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2023-12-22T16:20:51.887+08:00  INFO 24440 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-22T16:20:51.888+08:00  INFO 24440 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-22T16:20:51.955+08:00  INFO 24440 --- [main] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring embedded WebApplicationContext
+2023-12-22T16:20:51.955+08:00  INFO 24440 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 816 ms
+2023-12-22T16:20:52.320+08:00  INFO 24440 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/acstudents'
+2023-12-22T16:20:52.327+08:00  INFO 24440 --- [main] c.e.dbproject.DbProjectApplication       : Started DbProjectApplication in 1.634 seconds (process running for 2.136)
+2023-12-22T16:21:05.969+08:00  INFO 24440 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22T16:21:05.969+08:00  INFO 24440 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-22T16:21:05.970+08:00  INFO 24440 --- [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-22T16:24:42.128+08:00  INFO 24644 --- [main] c.e.dbproject.DbProjectApplication       : Starting DbProjectApplication using Java 17.0.7 with PID 24644 (D:\1数据库课程设计\dbProject\target\classes started by 杨骜捷 in D:\1数据库课程设计\dbProject)
+2023-12-22T16:24:42.131+08:00  INFO 24644 --- [main] c.e.dbproject.DbProjectApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-12-22T16:24:42.648+08:00  WARN 24644 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.dbproject]' package. Please check your configuration.
+2023-12-22T16:24:42.918+08:00  INFO 24644 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2023-12-22T16:24:42.925+08:00  INFO 24644 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-22T16:24:42.926+08:00  INFO 24644 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-22T16:24:42.989+08:00  INFO 24644 --- [main] o.a.c.c.C.[.[localhost].[/acstudents]    : Initializing Spring embedded WebApplicationContext
+2023-12-22T16:24:42.989+08:00  INFO 24644 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 811 ms
+2023-12-22T16:24:43.361+08:00  INFO 24644 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/acstudents'
+2023-12-22T16:24:43.368+08:00  INFO 24644 --- [main] c.e.dbproject.DbProjectApplication       : Started DbProjectApplication in 1.634 seconds (process running for 2.11)

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions</title>
+  <link rel="stylesheet" href="css/Admission.css">
+</head>
+<body>
+<h2>Admissions</h2>
+
+<!-- Display Admissions -->
+<ul id="admissionList"></ul>
+
+<!-- Add Admission Form -->
+<div>
+  <h3>Add Admission</h3>
+  <form id="addAdmissionForm">
+    <label for="admissionBatch">Admission Batch:</label>
+    <input type="text" id="admissionBatch" required>
+
+    <label for="studentId">Student ID:</label>
+    <input type="number" id="studentId" required>
+
+    <label for="collegeId">College ID:</label>
+    <input type="number" id="collegeId" required>
+
+    <button type="submit">Add Admission</button>
+  </form>
+</div>
+
+<script src="js/Admission.js"></script>
+</body>
+</html>

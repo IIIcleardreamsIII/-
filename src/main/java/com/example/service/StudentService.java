@@ -13,6 +13,7 @@ public interface StudentService {
     void updateStudent(Student student);
 
     void deleteStudent(int examNumber);
+    List<Student> getAllStudents();
 
     // 其他自定义查询方法...
 }
