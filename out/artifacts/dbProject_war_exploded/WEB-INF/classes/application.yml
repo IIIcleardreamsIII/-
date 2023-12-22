@@ -1,0 +1,23 @@
+server:
+  port: 8088    # 应用程序端口号
+  servlet:
+    context-path: /acstudents  # 应用程序上下文路径
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/college_students  # 数据库连接地址
+    username: root   # 数据库用户名
+    password: 24823yaj   # 数据库密码
+    driver-class-name: com.mysql.cj.jdbc.Driver  # 数据库驱动
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .html
+logging:
+  level:
+    root: info
+    com.star: debug
+  file:
+    name: log/blog-dev.log
+
+
