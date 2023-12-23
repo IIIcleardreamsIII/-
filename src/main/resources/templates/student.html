@@ -4,88 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Management</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 20px;
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    form {
-      margin-bottom: 20px;
-      background-color: #fff;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    form label {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    form input {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 10px;
-      box-sizing: border-box;
-    }
-
-    form button {
-      background-color: #007bff;
-      color: #fff;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background-color: #0056b3;
-    }
-
-    button {
-      background-color: #28a745;
-      color: #fff;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #218838;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    ul li {
-      background-color: #fff;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    }
-
-    ul li:hover {
-      background-color: #f8f9fa;
-    }
-
-  </style>
+  <link rel="stylesheet" href="css/student.css">
 </head>
 <body>
 
 <h1>学生管理系统</h1>
+
+  <h1>根据考试编号获取学生信息</h1>
+  <label for="examNumberInput">输入考号：</label>
+  <input type="text" id="examNumberInput" required>
+  <button onclick="getStudent()">获取学生信息</button>
+  <div id="studentInfo"></div>
 <!-- 添加学生表单 -->
 <form id="addStudentForm">
   <!-- 其他表单字段可以根据需要添加 -->
@@ -153,152 +82,6 @@
 <!-- 学生列表 -->
 <ul id="studentList"></ul>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-  // Add Detailed Student method
-  function addDetailedStudent() {
-    const examNumber = $('#examNumber').val();
-    const name = $('#name').val();
-    const gender = $('#gender').val();
-    const birthdate = $('#birthdate').val();
-    const className = $('#className').val();
-    const hometown = $('#hometown').val();
-    const entranceScore = $('#entranceScore').val();
-
-    const student = {
-      examNumber: parseInt(examNumber),
-      name: name,
-      gender: gender,
-      birthdate: birthdate,
-      className: className,
-      hometown: hometown,
-      entranceScore: parseInt(entranceScore)
-    };
-
-    $.ajax({
-      type: 'POST',
-      url: 'http://localhost:8089/acstudents/students/addDetailed',
-      contentType: 'application/json',
-      data: JSON.stringify(student),
-      success: function () {
-        alert('学生添加成功！');
-      },
-      error: function (error) {
-        console.error('添加学生时出错：', error);
-
-        if (error.responseJSON && error.responseJSON.status === 500) {
-          console.error('Server error:', error.responseJSON);
-        }
-
-        alert('添加学生时出错。有关详细信息，请查看控制台.');
-      }
-    });
-  }
-
-
-  function updateStudent() {
-    const updateExamNumber = $('#updateExamNumber').val();
-    const updateStudentName = $('#updateStudentName').val();
-    const updateGender = $('#updateGender').val();
-    const updateBirthdate = $('#updateBirthdate').val();
-    const updateClassName = $('#updateClassName').val();
-    const updateHometown = $('#updateHometown').val();
-    const updateEntranceScore = $('#updateEntranceScore').val();
-
-    const updatedStudent = {
-      examNumber: parseInt(updateExamNumber),
-      name: updateStudentName,
-      gender: updateGender,
-      birthdate: updateBirthdate,
-      className: updateClassName,
-      hometown: updateHometown,
-      entranceScore: parseInt(updateEntranceScore),
-    };
-
-    $.ajax({
-      type: 'PUT',
-      url: 'http://localhost:8089/acstudents/students/update',
-      contentType: 'application/json',
-      data: JSON.stringify(updatedStudent),
-      success: function (data) {
-        console.log('学生已更新：', data);
-        // 在成功时显示提示框
-        alert('学生已成功更新！');
-        // 如果需要，添加任何其他成功操作
-      },
-      error: function (error) {
-        console.error('更新学生时出错：', error);
-
-        // 在失败时显示错误提示框
-        alert('更新学生时出错，请查看控制台以获取详细信息。');
-
-        // 输出服务器错误的详细信息
-        if (error.responseJSON && error.responseJSON.status === 500) {
-          console.error('服务器错误：', error.responseJSON);
-        }
-      }
-    });
-  }
-
-
-  function deleteStudent() {
-    const deleteExamNumber = document.getElementById('deleteExamNumber').value;
-
-    fetch(`http://localhost:8089/acstudents/students/delete/${deleteExamNumber}`, {
-      method: 'DELETE',
-    })
-            .then(response => {
-              if (response.status === 200) {
-                alert('学生删除成功');
-                // 这里可以添加其他成功删除的逻辑
-              } else if (response.status === 404) {
-                alert('表中找不到该学生');
-                // 这里可以添加其他删除失败的逻辑
-              } else {
-                alert(`删除学生错误: ${response.statusText}`);
-                // 这里可以添加其他删除失败的逻辑
-              }
-            })
-            .catch(error => {
-              alert(`删除学生错误: ${error.message}`);
-              // 这里可以添加其他删除失败的逻辑
-            });
-  }
-
-  function fetchAllStudents() {
-    fetch('http://localhost:8089/acstudents/students/all')
-            .then(response => {
-              if (!response.ok) {
-                throw new Error('网络响应不正常');
-              }
-              return response.json();
-            })
-            .then(data => {
-              displayStudents(data);
-            })
-            .catch(error => {
-              console.error('获取学生时出错：', error);
-            });
-  }
-
-  function displayStudents(students) {
-    console.log('收到的学生数据：', students);
-
-    const studentList = document.getElementById('studentList');
-    studentList.innerHTML = '';
-
-    students.forEach(student => {
-      console.log('Processing student:', student);
-      console.log('Exam Number:', student.examNumber);
-      console.log('Student Name:', student.studentName);
-      console.log('Grade:', student.grade);
-
-      const listItem = document.createElement('li');
-      // 使用正确的属性名
-      listItem.textContent = `Exam Number: ${student.examNumber}, Student Name: ${student.name}, Grade: ${student.entranceScore}`;
-      studentList.appendChild(listItem);
-    });
-  }
-
-</script>
+<script src="js/student.js"></script>
 </body>
 </html>

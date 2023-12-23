@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Management</title>
+  <link rel="stylesheet" href="css/colleges.css">
+</head>
+<body>
+
+<h1>College Management</h1>
+<!-- 在合适的位置添加一个表单 -->
+<form id="searchCollegeForm">
+  <label for="collegeIdInput">学院编号:</label>
+  <input type="text" id="collegeIdInput" name="collegeId" required>
+  <button type="button" onclick="searchCollege()">查询</button>
+</form>
+
+<!-- 添加学院表单 -->
+<form id="addCollegeForm">
+  <!-- collegeId 设为只读，由后端自动分配 -->
+  <label for="collegeId">学院ID:</label>
+  <input type="text" id="collegeId" name="collegeId" required>
+  <br>
+  <label for="collegeName">学院名称:</label>
+  <input type="text" id="collegeName" name="collegeName" required>
+  <br>
+  <label for="collegeAddress">学院地址:</label>
+  <input type="text" id="collegeAddress" name="collegeAddress" required>
+  <br>
+  <button type="button" onclick="addCollege()">添加学院</button>
+</form>
+
+
+<!-- 更新学院表单 -->
+<form id="updateCollegeForm">
+  <label for="updateCollegeId">学院ID：</label>
+  <input type="text" id="updateCollegeId" name="updateCollegeId" required>
+
+  <label for="updateCollegeName">学院名称：</label>
+  <input type="text" id="updateCollegeName" name="updateCollegeName" required>
+
+  <label for="collegeAddress1">学院地址：</label>
+  <input type="text" id="collegeAddress1" name="collegeAddress" required>
+
+  <button type="button" onclick="updateCollege()">更新学院信息</button>
+</form>
+
+<!-- 删除学院表单 -->
+<form id="deleteCollegeForm">
+  <label for="deleteCollegeId">要删除的学院ID:</label>
+  <input type="text" id="deleteCollegeId" required>
+
+  <button type="button" onclick="deleteCollege()">删除学院</button>
+</form>
+
+<!-- 获取所有学院按钮 -->
+<button onclick="fetchAllColleges()">获取所有学院</button>
+
+<!-- 学院列表 -->
+<ul id="collegeList"></ul>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="js/college.js"></script>
+</body>
+</html>

@@ -1,9 +1,7 @@
-/* Admission.css */
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: 20px; /* increased margin for better spacing */
+    margin: 20px;
 }
 
 h1 {
@@ -75,4 +73,3 @@ ul li {
 ul li:hover {
     background-color: #f8f9fa;
 }
-
